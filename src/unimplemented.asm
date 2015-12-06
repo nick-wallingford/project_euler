@@ -5,8 +5,6 @@ unimp_len: equ $-unimp
 section .text
 global project_000
 project_000:
-global project_002
-project_002:
 global project_003
 project_003:
 global project_004
