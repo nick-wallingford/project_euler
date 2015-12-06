@@ -20,6 +20,8 @@ L1:
 	jz quit
 
 	call parse_ui
+	cmp rax,527
+	ja L1
 	mov r12,rax
 
 	mov rax,1
@@ -33,6 +35,8 @@ L1:
 	call print_nl
 
 	call [project_jump_table + r12*8]
+	call print_ui
+	call print_nl
 
 	jmp L1
 

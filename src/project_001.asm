@@ -1,8 +1,5 @@
 global project_001
 
-extern print_ui
-extern print_nl
-
 section .data
 jump_table:
 	dq rem_0    ; Is a jump table really the best way to solve this problem?
@@ -52,6 +49,4 @@ rem_14:
 	jb L1
 
 	mov rax,rbx
-	call print_ui
-	call print_nl
 	ret
