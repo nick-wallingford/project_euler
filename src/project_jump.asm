@@ -1,0 +1,1061 @@
+global project_jump_table
+
+extern project_000
+extern project_001
+extern project_002
+extern project_003
+extern project_004
+extern project_005
+extern project_006
+extern project_007
+extern project_008
+extern project_009
+extern project_010
+extern project_011
+extern project_012
+extern project_013
+extern project_014
+extern project_015
+extern project_016
+extern project_017
+extern project_018
+extern project_019
+extern project_020
+extern project_021
+extern project_022
+extern project_023
+extern project_024
+extern project_025
+extern project_026
+extern project_027
+extern project_028
+extern project_029
+extern project_030
+extern project_031
+extern project_032
+extern project_033
+extern project_034
+extern project_035
+extern project_036
+extern project_037
+extern project_038
+extern project_039
+extern project_040
+extern project_041
+extern project_042
+extern project_043
+extern project_044
+extern project_045
+extern project_046
+extern project_047
+extern project_048
+extern project_049
+extern project_050
+extern project_051
+extern project_052
+extern project_053
+extern project_054
+extern project_055
+extern project_056
+extern project_057
+extern project_058
+extern project_059
+extern project_060
+extern project_061
+extern project_062
+extern project_063
+extern project_064
+extern project_065
+extern project_066
+extern project_067
+extern project_068
+extern project_069
+extern project_070
+extern project_071
+extern project_072
+extern project_073
+extern project_074
+extern project_075
+extern project_076
+extern project_077
+extern project_078
+extern project_079
+extern project_080
+extern project_081
+extern project_082
+extern project_083
+extern project_084
+extern project_085
+extern project_086
+extern project_087
+extern project_088
+extern project_089
+extern project_090
+extern project_091
+extern project_092
+extern project_093
+extern project_094
+extern project_095
+extern project_096
+extern project_097
+extern project_098
+extern project_099
+extern project_100
+extern project_101
+extern project_102
+extern project_103
+extern project_104
+extern project_105
+extern project_106
+extern project_107
+extern project_108
+extern project_109
+extern project_110
+extern project_111
+extern project_112
+extern project_113
+extern project_114
+extern project_115
+extern project_116
+extern project_117
+extern project_118
+extern project_119
+extern project_120
+extern project_121
+extern project_122
+extern project_123
+extern project_124
+extern project_125
+extern project_126
+extern project_127
+extern project_128
+extern project_129
+extern project_130
+extern project_131
+extern project_132
+extern project_133
+extern project_134
+extern project_135
+extern project_136
+extern project_137
+extern project_138
+extern project_139
+extern project_140
+extern project_141
+extern project_142
+extern project_143
+extern project_144
+extern project_145
+extern project_146
+extern project_147
+extern project_148
+extern project_149
+extern project_150
+extern project_151
+extern project_152
+extern project_153
+extern project_154
+extern project_155
+extern project_156
+extern project_157
+extern project_158
+extern project_159
+extern project_160
+extern project_161
+extern project_162
+extern project_163
+extern project_164
+extern project_165
+extern project_166
+extern project_167
+extern project_168
+extern project_169
+extern project_170
+extern project_171
+extern project_172
+extern project_173
+extern project_174
+extern project_175
+extern project_176
+extern project_177
+extern project_178
+extern project_179
+extern project_180
+extern project_181
+extern project_182
+extern project_183
+extern project_184
+extern project_185
+extern project_186
+extern project_187
+extern project_188
+extern project_189
+extern project_190
+extern project_191
+extern project_192
+extern project_193
+extern project_194
+extern project_195
+extern project_196
+extern project_197
+extern project_198
+extern project_199
+extern project_200
+extern project_201
+extern project_202
+extern project_203
+extern project_204
+extern project_205
+extern project_206
+extern project_207
+extern project_208
+extern project_209
+extern project_210
+extern project_211
+extern project_212
+extern project_213
+extern project_214
+extern project_215
+extern project_216
+extern project_217
+extern project_218
+extern project_219
+extern project_220
+extern project_221
+extern project_222
+extern project_223
+extern project_224
+extern project_225
+extern project_226
+extern project_227
+extern project_228
+extern project_229
+extern project_230
+extern project_231
+extern project_232
+extern project_233
+extern project_234
+extern project_235
+extern project_236
+extern project_237
+extern project_238
+extern project_239
+extern project_240
+extern project_241
+extern project_242
+extern project_243
+extern project_244
+extern project_245
+extern project_246
+extern project_247
+extern project_248
+extern project_249
+extern project_250
+extern project_251
+extern project_252
+extern project_253
+extern project_254
+extern project_255
+extern project_256
+extern project_257
+extern project_258
+extern project_259
+extern project_260
+extern project_261
+extern project_262
+extern project_263
+extern project_264
+extern project_265
+extern project_266
+extern project_267
+extern project_268
+extern project_269
+extern project_270
+extern project_271
+extern project_272
+extern project_273
+extern project_274
+extern project_275
+extern project_276
+extern project_277
+extern project_278
+extern project_279
+extern project_280
+extern project_281
+extern project_282
+extern project_283
+extern project_284
+extern project_285
+extern project_286
+extern project_287
+extern project_288
+extern project_289
+extern project_290
+extern project_291
+extern project_292
+extern project_293
+extern project_294
+extern project_295
+extern project_296
+extern project_297
+extern project_298
+extern project_299
+extern project_300
+extern project_301
+extern project_302
+extern project_303
+extern project_304
+extern project_305
+extern project_306
+extern project_307
+extern project_308
+extern project_309
+extern project_310
+extern project_311
+extern project_312
+extern project_313
+extern project_314
+extern project_315
+extern project_316
+extern project_317
+extern project_318
+extern project_319
+extern project_320
+extern project_321
+extern project_322
+extern project_323
+extern project_324
+extern project_325
+extern project_326
+extern project_327
+extern project_328
+extern project_329
+extern project_330
+extern project_331
+extern project_332
+extern project_333
+extern project_334
+extern project_335
+extern project_336
+extern project_337
+extern project_338
+extern project_339
+extern project_340
+extern project_341
+extern project_342
+extern project_343
+extern project_344
+extern project_345
+extern project_346
+extern project_347
+extern project_348
+extern project_349
+extern project_350
+extern project_351
+extern project_352
+extern project_353
+extern project_354
+extern project_355
+extern project_356
+extern project_357
+extern project_358
+extern project_359
+extern project_360
+extern project_361
+extern project_362
+extern project_363
+extern project_364
+extern project_365
+extern project_366
+extern project_367
+extern project_368
+extern project_369
+extern project_370
+extern project_371
+extern project_372
+extern project_373
+extern project_374
+extern project_375
+extern project_376
+extern project_377
+extern project_378
+extern project_379
+extern project_380
+extern project_381
+extern project_382
+extern project_383
+extern project_384
+extern project_385
+extern project_386
+extern project_387
+extern project_388
+extern project_389
+extern project_390
+extern project_391
+extern project_392
+extern project_393
+extern project_394
+extern project_395
+extern project_396
+extern project_397
+extern project_398
+extern project_399
+extern project_400
+extern project_401
+extern project_402
+extern project_403
+extern project_404
+extern project_405
+extern project_406
+extern project_407
+extern project_408
+extern project_409
+extern project_410
+extern project_411
+extern project_412
+extern project_413
+extern project_414
+extern project_415
+extern project_416
+extern project_417
+extern project_418
+extern project_419
+extern project_420
+extern project_421
+extern project_422
+extern project_423
+extern project_424
+extern project_425
+extern project_426
+extern project_427
+extern project_428
+extern project_429
+extern project_430
+extern project_431
+extern project_432
+extern project_433
+extern project_434
+extern project_435
+extern project_436
+extern project_437
+extern project_438
+extern project_439
+extern project_440
+extern project_441
+extern project_442
+extern project_443
+extern project_444
+extern project_445
+extern project_446
+extern project_447
+extern project_448
+extern project_449
+extern project_450
+extern project_451
+extern project_452
+extern project_453
+extern project_454
+extern project_455
+extern project_456
+extern project_457
+extern project_458
+extern project_459
+extern project_460
+extern project_461
+extern project_462
+extern project_463
+extern project_464
+extern project_465
+extern project_466
+extern project_467
+extern project_468
+extern project_469
+extern project_470
+extern project_471
+extern project_472
+extern project_473
+extern project_474
+extern project_475
+extern project_476
+extern project_477
+extern project_478
+extern project_479
+extern project_480
+extern project_481
+extern project_482
+extern project_483
+extern project_484
+extern project_485
+extern project_486
+extern project_487
+extern project_488
+extern project_489
+extern project_490
+extern project_491
+extern project_492
+extern project_493
+extern project_494
+extern project_495
+extern project_496
+extern project_497
+extern project_498
+extern project_499
+extern project_500
+extern project_501
+extern project_502
+extern project_503
+extern project_504
+extern project_505
+extern project_506
+extern project_507
+extern project_508
+extern project_509
+extern project_510
+extern project_511
+extern project_512
+extern project_513
+extern project_514
+extern project_515
+extern project_516
+extern project_517
+extern project_518
+extern project_519
+extern project_520
+extern project_521
+extern project_522
+extern project_523
+extern project_524
+extern project_525
+extern project_526
+extern project_527
+
+section .data
+project_jump_table:
+	dq project_000
+	dq project_001
+	dq project_002
+	dq project_003
+	dq project_004
+	dq project_005
+	dq project_006
+	dq project_007
+	dq project_008
+	dq project_009
+	dq project_010
+	dq project_011
+	dq project_012
+	dq project_013
+	dq project_014
+	dq project_015
+	dq project_016
+	dq project_017
+	dq project_018
+	dq project_019
+	dq project_020
+	dq project_021
+	dq project_022
+	dq project_023
+	dq project_024
+	dq project_025
+	dq project_026
+	dq project_027
+	dq project_028
+	dq project_029
+	dq project_030
+	dq project_031
+	dq project_032
+	dq project_033
+	dq project_034
+	dq project_035
+	dq project_036
+	dq project_037
+	dq project_038
+	dq project_039
+	dq project_040
+	dq project_041
+	dq project_042
+	dq project_043
+	dq project_044
+	dq project_045
+	dq project_046
+	dq project_047
+	dq project_048
+	dq project_049
+	dq project_050
+	dq project_051
+	dq project_052
+	dq project_053
+	dq project_054
+	dq project_055
+	dq project_056
+	dq project_057
+	dq project_058
+	dq project_059
+	dq project_060
+	dq project_061
+	dq project_062
+	dq project_063
+	dq project_064
+	dq project_065
+	dq project_066
+	dq project_067
+	dq project_068
+	dq project_069
+	dq project_070
+	dq project_071
+	dq project_072
+	dq project_073
+	dq project_074
+	dq project_075
+	dq project_076
+	dq project_077
+	dq project_078
+	dq project_079
+	dq project_080
+	dq project_081
+	dq project_082
+	dq project_083
+	dq project_084
+	dq project_085
+	dq project_086
+	dq project_087
+	dq project_088
+	dq project_089
+	dq project_090
+	dq project_091
+	dq project_092
+	dq project_093
+	dq project_094
+	dq project_095
+	dq project_096
+	dq project_097
+	dq project_098
+	dq project_099
+	dq project_100
+	dq project_101
+	dq project_102
+	dq project_103
+	dq project_104
+	dq project_105
+	dq project_106
+	dq project_107
+	dq project_108
+	dq project_109
+	dq project_110
+	dq project_111
+	dq project_112
+	dq project_113
+	dq project_114
+	dq project_115
+	dq project_116
+	dq project_117
+	dq project_118
+	dq project_119
+	dq project_120
+	dq project_121
+	dq project_122
+	dq project_123
+	dq project_124
+	dq project_125
+	dq project_126
+	dq project_127
+	dq project_128
+	dq project_129
+	dq project_130
+	dq project_131
+	dq project_132
+	dq project_133
+	dq project_134
+	dq project_135
+	dq project_136
+	dq project_137
+	dq project_138
+	dq project_139
+	dq project_140
+	dq project_141
+	dq project_142
+	dq project_143
+	dq project_144
+	dq project_145
+	dq project_146
+	dq project_147
+	dq project_148
+	dq project_149
+	dq project_150
+	dq project_151
+	dq project_152
+	dq project_153
+	dq project_154
+	dq project_155
+	dq project_156
+	dq project_157
+	dq project_158
+	dq project_159
+	dq project_160
+	dq project_161
+	dq project_162
+	dq project_163
+	dq project_164
+	dq project_165
+	dq project_166
+	dq project_167
+	dq project_168
+	dq project_169
+	dq project_170
+	dq project_171
+	dq project_172
+	dq project_173
+	dq project_174
+	dq project_175
+	dq project_176
+	dq project_177
+	dq project_178
+	dq project_179
+	dq project_180
+	dq project_181
+	dq project_182
+	dq project_183
+	dq project_184
+	dq project_185
+	dq project_186
+	dq project_187
+	dq project_188
+	dq project_189
+	dq project_190
+	dq project_191
+	dq project_192
+	dq project_193
+	dq project_194
+	dq project_195
+	dq project_196
+	dq project_197
+	dq project_198
+	dq project_199
+	dq project_200
+	dq project_201
+	dq project_202
+	dq project_203
+	dq project_204
+	dq project_205
+	dq project_206
+	dq project_207
+	dq project_208
+	dq project_209
+	dq project_210
+	dq project_211
+	dq project_212
+	dq project_213
+	dq project_214
+	dq project_215
+	dq project_216
+	dq project_217
+	dq project_218
+	dq project_219
+	dq project_220
+	dq project_221
+	dq project_222
+	dq project_223
+	dq project_224
+	dq project_225
+	dq project_226
+	dq project_227
+	dq project_228
+	dq project_229
+	dq project_230
+	dq project_231
+	dq project_232
+	dq project_233
+	dq project_234
+	dq project_235
+	dq project_236
+	dq project_237
+	dq project_238
+	dq project_239
+	dq project_240
+	dq project_241
+	dq project_242
+	dq project_243
+	dq project_244
+	dq project_245
+	dq project_246
+	dq project_247
+	dq project_248
+	dq project_249
+	dq project_250
+	dq project_251
+	dq project_252
+	dq project_253
+	dq project_254
+	dq project_255
+	dq project_256
+	dq project_257
+	dq project_258
+	dq project_259
+	dq project_260
+	dq project_261
+	dq project_262
+	dq project_263
+	dq project_264
+	dq project_265
+	dq project_266
+	dq project_267
+	dq project_268
+	dq project_269
+	dq project_270
+	dq project_271
+	dq project_272
+	dq project_273
+	dq project_274
+	dq project_275
+	dq project_276
+	dq project_277
+	dq project_278
+	dq project_279
+	dq project_280
+	dq project_281
+	dq project_282
+	dq project_283
+	dq project_284
+	dq project_285
+	dq project_286
+	dq project_287
+	dq project_288
+	dq project_289
+	dq project_290
+	dq project_291
+	dq project_292
+	dq project_293
+	dq project_294
+	dq project_295
+	dq project_296
+	dq project_297
+	dq project_298
+	dq project_299
+	dq project_300
+	dq project_301
+	dq project_302
+	dq project_303
+	dq project_304
+	dq project_305
+	dq project_306
+	dq project_307
+	dq project_308
+	dq project_309
+	dq project_310
+	dq project_311
+	dq project_312
+	dq project_313
+	dq project_314
+	dq project_315
+	dq project_316
+	dq project_317
+	dq project_318
+	dq project_319
+	dq project_320
+	dq project_321
+	dq project_322
+	dq project_323
+	dq project_324
+	dq project_325
+	dq project_326
+	dq project_327
+	dq project_328
+	dq project_329
+	dq project_330
+	dq project_331
+	dq project_332
+	dq project_333
+	dq project_334
+	dq project_335
+	dq project_336
+	dq project_337
+	dq project_338
+	dq project_339
+	dq project_340
+	dq project_341
+	dq project_342
+	dq project_343
+	dq project_344
+	dq project_345
+	dq project_346
+	dq project_347
+	dq project_348
+	dq project_349
+	dq project_350
+	dq project_351
+	dq project_352
+	dq project_353
+	dq project_354
+	dq project_355
+	dq project_356
+	dq project_357
+	dq project_358
+	dq project_359
+	dq project_360
+	dq project_361
+	dq project_362
+	dq project_363
+	dq project_364
+	dq project_365
+	dq project_366
+	dq project_367
+	dq project_368
+	dq project_369
+	dq project_370
+	dq project_371
+	dq project_372
+	dq project_373
+	dq project_374
+	dq project_375
+	dq project_376
+	dq project_377
+	dq project_378
+	dq project_379
+	dq project_380
+	dq project_381
+	dq project_382
+	dq project_383
+	dq project_384
+	dq project_385
+	dq project_386
+	dq project_387
+	dq project_388
+	dq project_389
+	dq project_390
+	dq project_391
+	dq project_392
+	dq project_393
+	dq project_394
+	dq project_395
+	dq project_396
+	dq project_397
+	dq project_398
+	dq project_399
+	dq project_400
+	dq project_401
+	dq project_402
+	dq project_403
+	dq project_404
+	dq project_405
+	dq project_406
+	dq project_407
+	dq project_408
+	dq project_409
+	dq project_410
+	dq project_411
+	dq project_412
+	dq project_413
+	dq project_414
+	dq project_415
+	dq project_416
+	dq project_417
+	dq project_418
+	dq project_419
+	dq project_420
+	dq project_421
+	dq project_422
+	dq project_423
+	dq project_424
+	dq project_425
+	dq project_426
+	dq project_427
+	dq project_428
+	dq project_429
+	dq project_430
+	dq project_431
+	dq project_432
+	dq project_433
+	dq project_434
+	dq project_435
+	dq project_436
+	dq project_437
+	dq project_438
+	dq project_439
+	dq project_440
+	dq project_441
+	dq project_442
+	dq project_443
+	dq project_444
+	dq project_445
+	dq project_446
+	dq project_447
+	dq project_448
+	dq project_449
+	dq project_450
+	dq project_451
+	dq project_452
+	dq project_453
+	dq project_454
+	dq project_455
+	dq project_456
+	dq project_457
+	dq project_458
+	dq project_459
+	dq project_460
+	dq project_461
+	dq project_462
+	dq project_463
+	dq project_464
+	dq project_465
+	dq project_466
+	dq project_467
+	dq project_468
+	dq project_469
+	dq project_470
+	dq project_471
+	dq project_472
+	dq project_473
+	dq project_474
+	dq project_475
+	dq project_476
+	dq project_477
+	dq project_478
+	dq project_479
+	dq project_480
+	dq project_481
+	dq project_482
+	dq project_483
+	dq project_484
+	dq project_485
+	dq project_486
+	dq project_487
+	dq project_488
+	dq project_489
+	dq project_490
+	dq project_491
+	dq project_492
+	dq project_493
+	dq project_494
+	dq project_495
+	dq project_496
+	dq project_497
+	dq project_498
+	dq project_499
+	dq project_500
+	dq project_501
+	dq project_502
+	dq project_503
+	dq project_504
+	dq project_505
+	dq project_506
+	dq project_507
+	dq project_508
+	dq project_509
+	dq project_510
+	dq project_511
+	dq project_512
+	dq project_513
+	dq project_514
+	dq project_515
+	dq project_516
+	dq project_517
+	dq project_518
+	dq project_519
+	dq project_520
+	dq project_521
+	dq project_522
+	dq project_523
+	dq project_524
+	dq project_525
+	dq project_526
+	dq project_527
