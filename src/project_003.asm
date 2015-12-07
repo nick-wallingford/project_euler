@@ -1,19 +1,27 @@
+extern is_prime
+extern print_ui
+extern print_nl
 global project_003
-extern print_array_ui
-extern insertion_sort
 
 section .data
-	array dq 17,14,27,23654,273
+
+section .bss
 
 section .text
 project_003:
-	mov rsi,array
-	mov rdx,5
-	call insertion_sort
+	mov r14,1000
+	xor r15,r15
+.L1:
+	mov rax,r15
+	call is_prime
+	test rax,rax
+	jz .L2
+	mov rax,r15
+	call print_ui
+	call print_nl
+.L2:
+	inc r15
+	cmp r15,r14
+	jb .L1
 
-	mov rsi,array
-	mov rdx,5
-	call print_array_ui
-
-	mov rax,7821378213
 	ret
