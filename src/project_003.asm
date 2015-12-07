@@ -1,11 +1,16 @@
 global project_003
 extern print_array_ui
+extern insertion_sort
 
 section .data
-	array dq 8,14,27,23654,273
+	array dq 17,14,27,23654,273
 
 section .text
 project_003:
+	mov rsi,array
+	mov rdx,5
+	call insertion_sort
+
 	mov rsi,array
 	mov rdx,5
 	call print_array_ui
