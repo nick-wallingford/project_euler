@@ -1,5 +1,5 @@
 global print_array_ui
-global insertion_sort
+global insertion_sort_ui
 
 extern print_ui
 extern print_nl
@@ -7,8 +7,11 @@ extern print_nl
 section .text
 print_array_ui:
 	; Receives:
-	; rsi, the pointer to the array
-	; rdx, the number of elements
+	;  rsi, the pointer to the array
+	;  rdx, the number of elements
+	push r12
+	push r13
+
 	mov r13,rdx
 	mov r12,rsi
 .L1:
@@ -19,30 +22,35 @@ print_array_ui:
 	call print_nl
 	test r13,r13
 	jnz .L1
+
+	pop r13
+	pop r12
 	ret
 
-insertion_sort:
+insertion_sort_ui:
 	; Receives:
-	; rsi, the address of the array
-	; rdx, the element count.
+	;  rsi, the address of the array
+	;  rdx, the element count.
+	; Uses: rcx rdi r8 r9 r10
 	mov r8,1
-.L1:
-	cmp r8,rdx
-	je .quit
-	mov r9,r8
-.L2:
-	test r9,r9
-	jz .L3
-	mov rax,[rsi+r9*8-8]
-	mov rcx,[rsi+r9*8]
-	cmp rax,rcx
+	cmp rdx,r8
+	jbe .quit
+
+.L1:	lea rdi,[rsi+r8*8]
+	mov r9,[rdi]
+	mov rcx,r8
+
+.L2:	mov r10,[rdi-8]
+	cmp r10,r9
 	jbe .L3
-	mov [rsi+r9*8-8],rcx
-	mov [rsi+r9*8],rax
-	dec r9
-	jmp .L2
-.L3:
+
+	mov [rdi],r10
+	sub rdi,8
+	loop .L2
+
+.L3:	mov [rdi],r9
 	inc r8
-	jmp .L1
+	cmp r8,rdx
+	jb .L1
 
 .quit:	ret
