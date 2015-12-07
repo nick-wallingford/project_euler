@@ -3,7 +3,6 @@ global print_nl
 global print_i
 global gcd
 global parse_ui
-global puts_n
 
 section .data
 nl: db 10
@@ -12,34 +11,31 @@ section .bss
 buffer:resb 18
 
 section .text
-puts_n:
-
-
 parse_ui:
 	xor rax,rax
 	mov r9,10
-parse_ui_L1:
+.L1:
 	mov r8b,[rsi]
 	inc rsi
 	test r8b,r8b
-	jz parse_ui_quit
+	jz .quit
 	and r8,0Fh
 	mul r9
 	add rax,r8
-	loop parse_ui_L1
+	loop .L1
 
-parse_ui_quit:
+.quit:
 	ret
 
 gcd:
 	test rdi,rdi
-	jz gcd_exit
+	jz .quit
 	xor rdx,rdx
 	div rdi
 	mov rax,rdi
 	mov rdi,rdx
 	jmp gcd
-gcd_exit:
+.quit:
 	ret
 
 print_nl:
@@ -52,7 +48,7 @@ print_nl:
 
 print_i:
 	cmp rax,0
-	jge L2
+	jge .L2
 	neg rax
 	mov r8,rax
 	mov rax,1
@@ -61,7 +57,7 @@ print_i:
 	mov rdi,1
 	syscall
 	mov rax,r8
-L2:
+.L2:
 	call print_ui
 	ret
 
@@ -69,7 +65,7 @@ print_ui:
 	mov rsi,buffer+17
 	xor r8,r8
 	mov r9,10
-L1:
+.L1:
 	xor rdx,rdx
 	div r9
 	inc r8
@@ -77,7 +73,7 @@ L1:
 	mov [rsi],dl
 	dec rsi
 	test rax,rax
-	jnz L1
+	jnz .L1
 
 	inc rsi
 	mov rax,1

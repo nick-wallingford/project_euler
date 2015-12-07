@@ -14,14 +14,14 @@ global _start
 _start:
 	pop rsi
 	pop rsi
-L1:
+.L1:
 	pop rsi
 	test rsi,rsi
-	jz quit
+	jz .quit
 
 	call parse_ui
 	cmp rax,527
-	ja L1
+	ja .L1
 	mov r12,rax
 
 	mov rax,1
@@ -38,9 +38,9 @@ L1:
 	call print_ui
 	call print_nl
 
-	jmp L1
+	jmp .L1
 
-quit:
+.quit:
 	mov rax,60
 	mov rdi,0
 	syscall

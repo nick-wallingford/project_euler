@@ -12,5 +12,6 @@ euler: $(OBJECT)
 
 clean:
 	rm -f $(OBJECT)
+	rm -f *~ src/*~
 	rm -f euler
 .PHONY: clean
