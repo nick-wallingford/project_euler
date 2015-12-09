@@ -28,12 +28,12 @@ parse_ui:
 	ret
 
 gcd:
-	test rdi,rdi
+	test rbx,rbx
 	jz .quit
 	xor rdx,rdx
-	div rdi
-	mov rax,rdi
-	mov rdi,rdx
+	div rbx
+	mov rax,rbx
+	mov rbx,rdx
 	jmp gcd
 .quit:
 	ret
