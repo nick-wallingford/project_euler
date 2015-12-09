@@ -1,5 +1,6 @@
 global pow_mod_m
 global is_prime
+global factor
 
 section .data
 witness: db 2,3,5,7,11,13,17,19,23,29,31,37
@@ -10,6 +11,25 @@ composite_factors: resq 64
 prime_factors: resq 64
 
 section .text
+factor:
+	; Requires:
+	;  rax = number to factor
+	; Returns:
+	;  rax = number of prime factors
+	;  rsi = list of factors (in no particular order)
+
+	mov rcx,rax
+	call is_prime
+	test al,al
+	jnz .cont
+	mov rsi,prime_factors
+	mov [rsi],rcx
+	ret
+.cont:
+	mov rdi,prime_factors
+	xor rcx,rcx
+
+
 pow_mod_m:
 	; Requires:
 	;  r8 = base
