@@ -46,6 +46,7 @@ pow_mod_m:
 is_prime:
 	; Requires:
 	;  rax - number to test for primality
+	pusha
 	mov rsi,witness
 	xor rbx,rbx
 	mov rcx,witness_len
@@ -112,9 +113,11 @@ is_prime:
 
 	jmp .composite
 .prime:
+	popa
 	mov rax,1
 	ret
 
 .composite:
+	popa
 	xor rax,rax
 	ret
