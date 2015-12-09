@@ -70,15 +70,15 @@ is_prime:
 
 .L2:                ; write rax - 1 as 2^bh * r11
 	inc bh      ; this is trailing zero count of r11
-	shr r11,1
+	shr r11,1   ; We don't have the tzcnt instruction, so we do it the old fashioned way.
 	test r11,1
 	jz .L2
 
-	dec bh
-	mov bl,witness_len
+	dec bh      ; bh is the loop limit for the inner loop
+	mov bl,witness_len  ; bl is the loop limit for the outer loop.
 
 	mov rsi,witness
-	xor cl,cl
+	xor cl,cl    ; cl is the loop counter for the outer loop
 .L3:
 	inc cl
 	cmp bl,cl
@@ -95,7 +95,7 @@ is_prime:
 	cmp rax,r12
 	je .L3
 
-	xor ch,ch
+	xor ch,ch  ; ch is the loop counter for the inner loop
 .L4:
 	mul rax
 	div r9
