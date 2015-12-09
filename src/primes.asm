@@ -29,43 +29,52 @@ factor:
 	mov rdi,prime_factors
 	xor rcx,rcx
 
-
 pow_mod_m:
+	; Receives:
+	;  rax = base
+	;  rdi = exponent
+	;  rsi = modulus
+	; Returns:
+	;  rax = (base^exponent)%modulus
 	; Requires:
-	;  r8 = base
-	;  r9 = modulus
-	;  r10 = exponent
+	;  rdx rdi r10
 
-	mov rax,r8   ; base = base % exponent
-	xor rdx,rdx
-	div r9
-	mov r8,rdx
+	cmp rsi,1    ; if modulus == 1, return 0
+	jne .L0      ; by design, this will raise a divide by zero
+	xor rax,rax  ; exception if modulus == 0
+	ret
 
-	mov rax,1    ; result = 1
-.L1:
-	test r10,1
+.L0:	xor rdx,rdx   ; base %= modulus
+	div rsi
+	mov rax,rdx
+	mov r10,1    ; result = 1
+
+.L1:	test rdi,1
 	jz .L2
 
-	mul r8 ; result = (result * base) % modulus
-	div r9
+	; result = (result * base) % modulus
+	xchg rax,r10   ; r10 = base, rax = result
+	mul r10        ; rdx:rax = result * base
+	div rsi        ; rdx = (result*base) % modulus ; rax gets some garbage we don't care about
+	mov rax,r10    ; rax = base
+	mov r10,rdx    ; r10 = result
+
+.L2:	shr rdi,1 ; exponent /= 2
+
+	mul rax ; base = (base*base) % modulus
+	div rsi
 	mov rax,rdx
-.L2:
-	shr r10,1 ; exponent /= 2
 
-	xchg rax,r8 ; base = (base * base) % modulus
-	mul rax
-	div r9
-	mov rax,r8
-	mov r8,rdx
-
-	test r10,r10
+	test rdi,rdi ; while(exponent != 0)
 	jnz .L1
 
+	mov rax,r10
 	ret
 
 is_prime:
 	; Requires:
 	;  rax - number to test for primality
+
 	mov rsi,witness
 	xor rbx,rbx
 	mov rcx,witness_len
