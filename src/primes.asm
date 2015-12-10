@@ -3,7 +3,7 @@ global is_prime
 global factor
 
 section .data
-witness: db 2,3,5,7,11,13,17,19,23,29,31,37
+witness: db 37,31,29,23,19,17,13,11,7,5,3,2
 witness_len: equ $-witness
 
 section .bss
@@ -72,78 +72,78 @@ pow_mod_m:
 	ret
 
 is_prime:
+	; Receives:
+	;  rsi - number to test for primality
+	; Returns:
+	;  rax - 1 if prime, 0 if composite
 	; Requires:
-	;  rax - number to test for primality
+	;  rbx rcx rdx rdi r8 r9 r10 r11
 
-	mov rsi,witness
-	xor rbx,rbx
+	mov r8,witness
 	mov rcx,witness_len
-.L1:
-	mov bl,[rsi] ; Make sure the number isn't a witness, which are all prime.
-	cmp rax,rbx
+	xor rbx,rbx
+
+.L1:	mov bl,[r8] ; Make sure the number isn't a witness, which are all prime.
+	cmp rsi,rbx
 	je .prime
-	inc rsi
+	inc r8
 	loop .L1
 
-	cmp rax,41  ; All numbers less than 41 that are not a witness are composite.
+	cmp rsi,41  ; All numbers less than 41 that are not a witness are composite.
 	jb .composite
 
-	test rax,1  ; All remaining even numbers are composite.
+	test rsi,1  ; All remaining even numbers are composite.
 	jz .composite
 
-	mov r9,rax  ; r9 = n = modulus
-	mov r11,rax ; r11 = d
-	xor bh,bh ; bh = r
-	dec r11
-	mov r12,r11 ; r12 = n - 1
+	mov r9,rsi  ; r9 will have a copy of n - 1
+	dec r9
+	mov r11,r9  ; r11 has (n - 1) will trailing zeroes dropped
 
-.L2:                ; write rax - 1 as 2^bh * r11
-	inc bh      ; this is trailing zero count of r11
-	shr r11,1   ; We don't have the tzcnt instruction, so we do it the old fashioned way.
+.L2:    inc bh      ; calculate tzcnt of n-1. Store tzcnt in bh.
+	shr r11,1   ; keep n-1 with trailing zeroes dropped in r11
 	test r11,1
 	jz .L2
 
-	dec bh      ; bh is the loop limit for the inner loop
 	mov bl,witness_len  ; bl is the loop limit for the outer loop.
-
-	mov rsi,witness
 	xor cl,cl    ; cl is the loop counter for the outer loop
-.L3:
-	inc cl
+
+.L3:	inc cl
 	cmp bl,cl
 	je .prime ; If we've check all witnesses, it is prime.
 
-	xor r8,r8
-	mov r8b,[rsi]
-	mov r10,r11
-	inc rsi
+	dec r8
+	xor rax,rax
+	mov rdi,r11
+	mov al,[r8]
 	call pow_mod_m
 
 	cmp rax,1
 	je .L3
-	cmp rax,r12
+	cmp rax,r9
 	je .L3
 
-	xor ch,ch  ; ch is the loop counter for the inner loop
-.L4:
-	mul rax
-	div r9
+	mov ch,bh  ; ch is the loop counter for the inner loop
+	; We need bh - 1 iterations.
+	; bh will always be no less than 1, and decrementing the counter in
+	; a do-while not-zero loop gives us what we need.
+
+.L4:	mul rax
+	div rsi
+	dec ch      ; Update loop counter. We do it here.
 	mov rax,rdx
 
 	cmp rax,1
 	je .composite
-	cmp rax,r12
+	cmp rax,r9
 	je .L3
 
-	inc ch
-	cmp ch,bh
-	jb .L4
-
-	jmp .composite
-.prime:
-	mov rax,1
-	ret
+	test ch,ch
+	jnz .L4
 
 .composite:
 	xor rax,rax
+	ret
+
+.prime:
+	mov rax,1
 	ret

@@ -1,18 +1,15 @@
 extern is_prime
 extern print_ui
 extern print_nl
+
 global project_003
-
-section .data
-
-section .bss
 
 section .text
 project_003:
 	mov r14,1000
 	xor r15,r15
 .L1:
-	mov rax,r15
+	mov rsi,r15
 	call is_prime
 	test rax,rax
 	jz .L2
