@@ -1,3 +1,5 @@
+extern gcd
+
 global pow_mod_m
 global _is_prime
 global is_prime
@@ -6,6 +8,7 @@ global factor
 section .data
 witness: db 37,31,29,23,19,17,13,11,7,5,3,2
 witness_len: equ $-witness
+witness_product: equ 7420738134810
 
 section .bss
 composite_factors: resq 64
@@ -81,12 +84,16 @@ is_prime:
 	; Requires:
 	;  rbx rcx rdx rdi r8 r9 r10 r11
 
+	cmp rsi,1
+	jbe .composite ; 0 and 1 are not prime
+
 	mov r8,witness
 	mov rcx,witness_len
 	xor rbx,rbx
 
 .L1:	mov bl,[r8] ; Make sure the number isn't a witness, which are all prime.
 	cmp rsi,rbx
+
 	je .prime
 	inc r8
 	loop .L1
@@ -94,8 +101,11 @@ is_prime:
 	cmp rsi,41  ; All numbers less than 41 that are not a witness are composite.
 	jb .composite
 
-	test rsi,1  ; All remaining even numbers are composite.
-	jz .composite
+	mov rbx,rsi  ; This is basically an optimized trial division for the first several primes.
+	mov rax,witness_product
+	call gcd
+	cmp rax,1
+	jne .composite
 
 	mov r9,rsi  ; r9 will have a copy of n - 1
 	dec r9
