@@ -1,4 +1,5 @@
 global pow_mod_m
+global _is_prime
 global is_prime
 global factor
 
@@ -71,6 +72,7 @@ pow_mod_m:
 	mov rax,r10
 	ret
 
+_is_prime:
 is_prime:
 	; Receives:
 	;  rsi - number to test for primality
