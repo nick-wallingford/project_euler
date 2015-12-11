@@ -3,6 +3,8 @@ extern gcd
 global pow_mod_m
 global _is_prime
 global is_prime
+
+global _factor
 global factor
 
 section .data
@@ -15,23 +17,61 @@ composite_factors: resq 64
 prime_factors: resq 64
 
 section .text
+_factor:
 factor:
-	; Requires:
-	;  rax = number to factor
+	; Receives:
+	;  rsi = number to factor
 	; Returns:
 	;  rax = number of prime factors
 	;  rsi = list of factors (in no particular order)
+	; Requires:
+	; rax rbx rcx rdx rdi rsi r8 r9 r10 r11 r12 r13 r14
 
-	mov rcx,rax
+	mov r12,composite_factors ; ptr to top element of composite_factors
+	mov r13,prime_factors ; ptr to top element of prime_factors
+	xor r14,r14  ; number of prime factors
+	mov [r12],rsi
+
+.L1:	mov rsi,[r12]
 	call is_prime
 	test al,al
-	jnz .cont
-	mov rsi,prime_factors
-	mov [rsi],rcx
-	ret
-.cont:
-	mov rdi,prime_factors
+	jnz .found_prime
+
 	xor rcx,rcx
+.rho_loop:
+	dec rcx
+	mov rax,rcx
+	mov rbx,rsi
+
+	call gcd
+	cmp rax,1
+	je .rho_loop
+	cmp rax,rsi
+	je .rho_loop
+
+	; rax is now a non-trivial factor
+	mov [r12],rax  ; Push it to the stack.
+
+	xchg rax,rsi   ; Divide our composite by the new non-trivial factor.
+	xor rdx,rdx
+	div rsi
+
+	add r12,8      ; Increment the stack and push the other non-trivial factor.
+	mov [r12],rax
+	jmp .L1
+
+.found_prime:
+	mov [r13],rsi ; Add prime to the list of primes.
+	add r13,8     ; increment prime pointer
+	sub r12,8     ; decrement composite pointer.
+	inc r14
+
+	cmp r12,composite_factors
+	jae .L1       ; Loop while the composite_factors stack is non-empty.
+
+	mov rax,r14
+	mov rsi,prime_factors
+	ret
 
 pow_mod_m:
 	; Receives:
