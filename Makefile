@@ -22,5 +22,6 @@ clean:
 	rm -f $(TEST_OBJ)
 	rm -f $(OBJECT)
 	rm -f *~ src/*~
+	rm -f test
 	rm -f euler
 .PHONY: clean
