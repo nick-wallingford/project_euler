@@ -1,4 +1,4 @@
-global project_001
+global problem_001
 
 section .data
 jump_table:
@@ -19,7 +19,7 @@ jump_table:
 	dq rem_14
 
 section .text
-project_001:
+problem_001:
 	xor rbx,rbx  ; sum
 	mov rcx,15   ; divisor
 	xor r8,r8    ; counter

@@ -1,0 +1,1061 @@
+global problem_jump_table
+
+extern problem_000
+extern problem_001
+extern problem_002
+extern problem_003
+extern problem_004
+extern problem_005
+extern problem_006
+extern problem_007
+extern problem_008
+extern problem_009
+extern problem_010
+extern problem_011
+extern problem_012
+extern problem_013
+extern problem_014
+extern problem_015
+extern problem_016
+extern problem_017
+extern problem_018
+extern problem_019
+extern problem_020
+extern problem_021
+extern problem_022
+extern problem_023
+extern problem_024
+extern problem_025
+extern problem_026
+extern problem_027
+extern problem_028
+extern problem_029
+extern problem_030
+extern problem_031
+extern problem_032
+extern problem_033
+extern problem_034
+extern problem_035
+extern problem_036
+extern problem_037
+extern problem_038
+extern problem_039
+extern problem_040
+extern problem_041
+extern problem_042
+extern problem_043
+extern problem_044
+extern problem_045
+extern problem_046
+extern problem_047
+extern problem_048
+extern problem_049
+extern problem_050
+extern problem_051
+extern problem_052
+extern problem_053
+extern problem_054
+extern problem_055
+extern problem_056
+extern problem_057
+extern problem_058
+extern problem_059
+extern problem_060
+extern problem_061
+extern problem_062
+extern problem_063
+extern problem_064
+extern problem_065
+extern problem_066
+extern problem_067
+extern problem_068
+extern problem_069
+extern problem_070
+extern problem_071
+extern problem_072
+extern problem_073
+extern problem_074
+extern problem_075
+extern problem_076
+extern problem_077
+extern problem_078
+extern problem_079
+extern problem_080
+extern problem_081
+extern problem_082
+extern problem_083
+extern problem_084
+extern problem_085
+extern problem_086
+extern problem_087
+extern problem_088
+extern problem_089
+extern problem_090
+extern problem_091
+extern problem_092
+extern problem_093
+extern problem_094
+extern problem_095
+extern problem_096
+extern problem_097
+extern problem_098
+extern problem_099
+extern problem_100
+extern problem_101
+extern problem_102
+extern problem_103
+extern problem_104
+extern problem_105
+extern problem_106
+extern problem_107
+extern problem_108
+extern problem_109
+extern problem_110
+extern problem_111
+extern problem_112
+extern problem_113
+extern problem_114
+extern problem_115
+extern problem_116
+extern problem_117
+extern problem_118
+extern problem_119
+extern problem_120
+extern problem_121
+extern problem_122
+extern problem_123
+extern problem_124
+extern problem_125
+extern problem_126
+extern problem_127
+extern problem_128
+extern problem_129
+extern problem_130
+extern problem_131
+extern problem_132
+extern problem_133
+extern problem_134
+extern problem_135
+extern problem_136
+extern problem_137
+extern problem_138
+extern problem_139
+extern problem_140
+extern problem_141
+extern problem_142
+extern problem_143
+extern problem_144
+extern problem_145
+extern problem_146
+extern problem_147
+extern problem_148
+extern problem_149
+extern problem_150
+extern problem_151
+extern problem_152
+extern problem_153
+extern problem_154
+extern problem_155
+extern problem_156
+extern problem_157
+extern problem_158
+extern problem_159
+extern problem_160
+extern problem_161
+extern problem_162
+extern problem_163
+extern problem_164
+extern problem_165
+extern problem_166
+extern problem_167
+extern problem_168
+extern problem_169
+extern problem_170
+extern problem_171
+extern problem_172
+extern problem_173
+extern problem_174
+extern problem_175
+extern problem_176
+extern problem_177
+extern problem_178
+extern problem_179
+extern problem_180
+extern problem_181
+extern problem_182
+extern problem_183
+extern problem_184
+extern problem_185
+extern problem_186
+extern problem_187
+extern problem_188
+extern problem_189
+extern problem_190
+extern problem_191
+extern problem_192
+extern problem_193
+extern problem_194
+extern problem_195
+extern problem_196
+extern problem_197
+extern problem_198
+extern problem_199
+extern problem_200
+extern problem_201
+extern problem_202
+extern problem_203
+extern problem_204
+extern problem_205
+extern problem_206
+extern problem_207
+extern problem_208
+extern problem_209
+extern problem_210
+extern problem_211
+extern problem_212
+extern problem_213
+extern problem_214
+extern problem_215
+extern problem_216
+extern problem_217
+extern problem_218
+extern problem_219
+extern problem_220
+extern problem_221
+extern problem_222
+extern problem_223
+extern problem_224
+extern problem_225
+extern problem_226
+extern problem_227
+extern problem_228
+extern problem_229
+extern problem_230
+extern problem_231
+extern problem_232
+extern problem_233
+extern problem_234
+extern problem_235
+extern problem_236
+extern problem_237
+extern problem_238
+extern problem_239
+extern problem_240
+extern problem_241
+extern problem_242
+extern problem_243
+extern problem_244
+extern problem_245
+extern problem_246
+extern problem_247
+extern problem_248
+extern problem_249
+extern problem_250
+extern problem_251
+extern problem_252
+extern problem_253
+extern problem_254
+extern problem_255
+extern problem_256
+extern problem_257
+extern problem_258
+extern problem_259
+extern problem_260
+extern problem_261
+extern problem_262
+extern problem_263
+extern problem_264
+extern problem_265
+extern problem_266
+extern problem_267
+extern problem_268
+extern problem_269
+extern problem_270
+extern problem_271
+extern problem_272
+extern problem_273
+extern problem_274
+extern problem_275
+extern problem_276
+extern problem_277
+extern problem_278
+extern problem_279
+extern problem_280
+extern problem_281
+extern problem_282
+extern problem_283
+extern problem_284
+extern problem_285
+extern problem_286
+extern problem_287
+extern problem_288
+extern problem_289
+extern problem_290
+extern problem_291
+extern problem_292
+extern problem_293
+extern problem_294
+extern problem_295
+extern problem_296
+extern problem_297
+extern problem_298
+extern problem_299
+extern problem_300
+extern problem_301
+extern problem_302
+extern problem_303
+extern problem_304
+extern problem_305
+extern problem_306
+extern problem_307
+extern problem_308
+extern problem_309
+extern problem_310
+extern problem_311
+extern problem_312
+extern problem_313
+extern problem_314
+extern problem_315
+extern problem_316
+extern problem_317
+extern problem_318
+extern problem_319
+extern problem_320
+extern problem_321
+extern problem_322
+extern problem_323
+extern problem_324
+extern problem_325
+extern problem_326
+extern problem_327
+extern problem_328
+extern problem_329
+extern problem_330
+extern problem_331
+extern problem_332
+extern problem_333
+extern problem_334
+extern problem_335
+extern problem_336
+extern problem_337
+extern problem_338
+extern problem_339
+extern problem_340
+extern problem_341
+extern problem_342
+extern problem_343
+extern problem_344
+extern problem_345
+extern problem_346
+extern problem_347
+extern problem_348
+extern problem_349
+extern problem_350
+extern problem_351
+extern problem_352
+extern problem_353
+extern problem_354
+extern problem_355
+extern problem_356
+extern problem_357
+extern problem_358
+extern problem_359
+extern problem_360
+extern problem_361
+extern problem_362
+extern problem_363
+extern problem_364
+extern problem_365
+extern problem_366
+extern problem_367
+extern problem_368
+extern problem_369
+extern problem_370
+extern problem_371
+extern problem_372
+extern problem_373
+extern problem_374
+extern problem_375
+extern problem_376
+extern problem_377
+extern problem_378
+extern problem_379
+extern problem_380
+extern problem_381
+extern problem_382
+extern problem_383
+extern problem_384
+extern problem_385
+extern problem_386
+extern problem_387
+extern problem_388
+extern problem_389
+extern problem_390
+extern problem_391
+extern problem_392
+extern problem_393
+extern problem_394
+extern problem_395
+extern problem_396
+extern problem_397
+extern problem_398
+extern problem_399
+extern problem_400
+extern problem_401
+extern problem_402
+extern problem_403
+extern problem_404
+extern problem_405
+extern problem_406
+extern problem_407
+extern problem_408
+extern problem_409
+extern problem_410
+extern problem_411
+extern problem_412
+extern problem_413
+extern problem_414
+extern problem_415
+extern problem_416
+extern problem_417
+extern problem_418
+extern problem_419
+extern problem_420
+extern problem_421
+extern problem_422
+extern problem_423
+extern problem_424
+extern problem_425
+extern problem_426
+extern problem_427
+extern problem_428
+extern problem_429
+extern problem_430
+extern problem_431
+extern problem_432
+extern problem_433
+extern problem_434
+extern problem_435
+extern problem_436
+extern problem_437
+extern problem_438
+extern problem_439
+extern problem_440
+extern problem_441
+extern problem_442
+extern problem_443
+extern problem_444
+extern problem_445
+extern problem_446
+extern problem_447
+extern problem_448
+extern problem_449
+extern problem_450
+extern problem_451
+extern problem_452
+extern problem_453
+extern problem_454
+extern problem_455
+extern problem_456
+extern problem_457
+extern problem_458
+extern problem_459
+extern problem_460
+extern problem_461
+extern problem_462
+extern problem_463
+extern problem_464
+extern problem_465
+extern problem_466
+extern problem_467
+extern problem_468
+extern problem_469
+extern problem_470
+extern problem_471
+extern problem_472
+extern problem_473
+extern problem_474
+extern problem_475
+extern problem_476
+extern problem_477
+extern problem_478
+extern problem_479
+extern problem_480
+extern problem_481
+extern problem_482
+extern problem_483
+extern problem_484
+extern problem_485
+extern problem_486
+extern problem_487
+extern problem_488
+extern problem_489
+extern problem_490
+extern problem_491
+extern problem_492
+extern problem_493
+extern problem_494
+extern problem_495
+extern problem_496
+extern problem_497
+extern problem_498
+extern problem_499
+extern problem_500
+extern problem_501
+extern problem_502
+extern problem_503
+extern problem_504
+extern problem_505
+extern problem_506
+extern problem_507
+extern problem_508
+extern problem_509
+extern problem_510
+extern problem_511
+extern problem_512
+extern problem_513
+extern problem_514
+extern problem_515
+extern problem_516
+extern problem_517
+extern problem_518
+extern problem_519
+extern problem_520
+extern problem_521
+extern problem_522
+extern problem_523
+extern problem_524
+extern problem_525
+extern problem_526
+extern problem_527
+
+section .data
+problem_jump_table:
+	dq problem_000
+	dq problem_001
+	dq problem_002
+	dq problem_003
+	dq problem_004
+	dq problem_005
+	dq problem_006
+	dq problem_007
+	dq problem_008
+	dq problem_009
+	dq problem_010
+	dq problem_011
+	dq problem_012
+	dq problem_013
+	dq problem_014
+	dq problem_015
+	dq problem_016
+	dq problem_017
+	dq problem_018
+	dq problem_019
+	dq problem_020
+	dq problem_021
+	dq problem_022
+	dq problem_023
+	dq problem_024
+	dq problem_025
+	dq problem_026
+	dq problem_027
+	dq problem_028
+	dq problem_029
+	dq problem_030
+	dq problem_031
+	dq problem_032
+	dq problem_033
+	dq problem_034
+	dq problem_035
+	dq problem_036
+	dq problem_037
+	dq problem_038
+	dq problem_039
+	dq problem_040
+	dq problem_041
+	dq problem_042
+	dq problem_043
+	dq problem_044
+	dq problem_045
+	dq problem_046
+	dq problem_047
+	dq problem_048
+	dq problem_049
+	dq problem_050
+	dq problem_051
+	dq problem_052
+	dq problem_053
+	dq problem_054
+	dq problem_055
+	dq problem_056
+	dq problem_057
+	dq problem_058
+	dq problem_059
+	dq problem_060
+	dq problem_061
+	dq problem_062
+	dq problem_063
+	dq problem_064
+	dq problem_065
+	dq problem_066
+	dq problem_067
+	dq problem_068
+	dq problem_069
+	dq problem_070
+	dq problem_071
+	dq problem_072
+	dq problem_073
+	dq problem_074
+	dq problem_075
+	dq problem_076
+	dq problem_077
+	dq problem_078
+	dq problem_079
+	dq problem_080
+	dq problem_081
+	dq problem_082
+	dq problem_083
+	dq problem_084
+	dq problem_085
+	dq problem_086
+	dq problem_087
+	dq problem_088
+	dq problem_089
+	dq problem_090
+	dq problem_091
+	dq problem_092
+	dq problem_093
+	dq problem_094
+	dq problem_095
+	dq problem_096
+	dq problem_097
+	dq problem_098
+	dq problem_099
+	dq problem_100
+	dq problem_101
+	dq problem_102
+	dq problem_103
+	dq problem_104
+	dq problem_105
+	dq problem_106
+	dq problem_107
+	dq problem_108
+	dq problem_109
+	dq problem_110
+	dq problem_111
+	dq problem_112
+	dq problem_113
+	dq problem_114
+	dq problem_115
+	dq problem_116
+	dq problem_117
+	dq problem_118
+	dq problem_119
+	dq problem_120
+	dq problem_121
+	dq problem_122
+	dq problem_123
+	dq problem_124
+	dq problem_125
+	dq problem_126
+	dq problem_127
+	dq problem_128
+	dq problem_129
+	dq problem_130
+	dq problem_131
+	dq problem_132
+	dq problem_133
+	dq problem_134
+	dq problem_135
+	dq problem_136
+	dq problem_137
+	dq problem_138
+	dq problem_139
+	dq problem_140
+	dq problem_141
+	dq problem_142
+	dq problem_143
+	dq problem_144
+	dq problem_145
+	dq problem_146
+	dq problem_147
+	dq problem_148
+	dq problem_149
+	dq problem_150
+	dq problem_151
+	dq problem_152
+	dq problem_153
+	dq problem_154
+	dq problem_155
+	dq problem_156
+	dq problem_157
+	dq problem_158
+	dq problem_159
+	dq problem_160
+	dq problem_161
+	dq problem_162
+	dq problem_163
+	dq problem_164
+	dq problem_165
+	dq problem_166
+	dq problem_167
+	dq problem_168
+	dq problem_169
+	dq problem_170
+	dq problem_171
+	dq problem_172
+	dq problem_173
+	dq problem_174
+	dq problem_175
+	dq problem_176
+	dq problem_177
+	dq problem_178
+	dq problem_179
+	dq problem_180
+	dq problem_181
+	dq problem_182
+	dq problem_183
+	dq problem_184
+	dq problem_185
+	dq problem_186
+	dq problem_187
+	dq problem_188
+	dq problem_189
+	dq problem_190
+	dq problem_191
+	dq problem_192
+	dq problem_193
+	dq problem_194
+	dq problem_195
+	dq problem_196
+	dq problem_197
+	dq problem_198
+	dq problem_199
+	dq problem_200
+	dq problem_201
+	dq problem_202
+	dq problem_203
+	dq problem_204
+	dq problem_205
+	dq problem_206
+	dq problem_207
+	dq problem_208
+	dq problem_209
+	dq problem_210
+	dq problem_211
+	dq problem_212
+	dq problem_213
+	dq problem_214
+	dq problem_215
+	dq problem_216
+	dq problem_217
+	dq problem_218
+	dq problem_219
+	dq problem_220
+	dq problem_221
+	dq problem_222
+	dq problem_223
+	dq problem_224
+	dq problem_225
+	dq problem_226
+	dq problem_227
+	dq problem_228
+	dq problem_229
+	dq problem_230
+	dq problem_231
+	dq problem_232
+	dq problem_233
+	dq problem_234
+	dq problem_235
+	dq problem_236
+	dq problem_237
+	dq problem_238
+	dq problem_239
+	dq problem_240
+	dq problem_241
+	dq problem_242
+	dq problem_243
+	dq problem_244
+	dq problem_245
+	dq problem_246
+	dq problem_247
+	dq problem_248
+	dq problem_249
+	dq problem_250
+	dq problem_251
+	dq problem_252
+	dq problem_253
+	dq problem_254
+	dq problem_255
+	dq problem_256
+	dq problem_257
+	dq problem_258
+	dq problem_259
+	dq problem_260
+	dq problem_261
+	dq problem_262
+	dq problem_263
+	dq problem_264
+	dq problem_265
+	dq problem_266
+	dq problem_267
+	dq problem_268
+	dq problem_269
+	dq problem_270
+	dq problem_271
+	dq problem_272
+	dq problem_273
+	dq problem_274
+	dq problem_275
+	dq problem_276
+	dq problem_277
+	dq problem_278
+	dq problem_279
+	dq problem_280
+	dq problem_281
+	dq problem_282
+	dq problem_283
+	dq problem_284
+	dq problem_285
+	dq problem_286
+	dq problem_287
+	dq problem_288
+	dq problem_289
+	dq problem_290
+	dq problem_291
+	dq problem_292
+	dq problem_293
+	dq problem_294
+	dq problem_295
+	dq problem_296
+	dq problem_297
+	dq problem_298
+	dq problem_299
+	dq problem_300
+	dq problem_301
+	dq problem_302
+	dq problem_303
+	dq problem_304
+	dq problem_305
+	dq problem_306
+	dq problem_307
+	dq problem_308
+	dq problem_309
+	dq problem_310
+	dq problem_311
+	dq problem_312
+	dq problem_313
+	dq problem_314
+	dq problem_315
+	dq problem_316
+	dq problem_317
+	dq problem_318
+	dq problem_319
+	dq problem_320
+	dq problem_321
+	dq problem_322
+	dq problem_323
+	dq problem_324
+	dq problem_325
+	dq problem_326
+	dq problem_327
+	dq problem_328
+	dq problem_329
+	dq problem_330
+	dq problem_331
+	dq problem_332
+	dq problem_333
+	dq problem_334
+	dq problem_335
+	dq problem_336
+	dq problem_337
+	dq problem_338
+	dq problem_339
+	dq problem_340
+	dq problem_341
+	dq problem_342
+	dq problem_343
+	dq problem_344
+	dq problem_345
+	dq problem_346
+	dq problem_347
+	dq problem_348
+	dq problem_349
+	dq problem_350
+	dq problem_351
+	dq problem_352
+	dq problem_353
+	dq problem_354
+	dq problem_355
+	dq problem_356
+	dq problem_357
+	dq problem_358
+	dq problem_359
+	dq problem_360
+	dq problem_361
+	dq problem_362
+	dq problem_363
+	dq problem_364
+	dq problem_365
+	dq problem_366
+	dq problem_367
+	dq problem_368
+	dq problem_369
+	dq problem_370
+	dq problem_371
+	dq problem_372
+	dq problem_373
+	dq problem_374
+	dq problem_375
+	dq problem_376
+	dq problem_377
+	dq problem_378
+	dq problem_379
+	dq problem_380
+	dq problem_381
+	dq problem_382
+	dq problem_383
+	dq problem_384
+	dq problem_385
+	dq problem_386
+	dq problem_387
+	dq problem_388
+	dq problem_389
+	dq problem_390
+	dq problem_391
+	dq problem_392
+	dq problem_393
+	dq problem_394
+	dq problem_395
+	dq problem_396
+	dq problem_397
+	dq problem_398
+	dq problem_399
+	dq problem_400
+	dq problem_401
+	dq problem_402
+	dq problem_403
+	dq problem_404
+	dq problem_405
+	dq problem_406
+	dq problem_407
+	dq problem_408
+	dq problem_409
+	dq problem_410
+	dq problem_411
+	dq problem_412
+	dq problem_413
+	dq problem_414
+	dq problem_415
+	dq problem_416
+	dq problem_417
+	dq problem_418
+	dq problem_419
+	dq problem_420
+	dq problem_421
+	dq problem_422
+	dq problem_423
+	dq problem_424
+	dq problem_425
+	dq problem_426
+	dq problem_427
+	dq problem_428
+	dq problem_429
+	dq problem_430
+	dq problem_431
+	dq problem_432
+	dq problem_433
+	dq problem_434
+	dq problem_435
+	dq problem_436
+	dq problem_437
+	dq problem_438
+	dq problem_439
+	dq problem_440
+	dq problem_441
+	dq problem_442
+	dq problem_443
+	dq problem_444
+	dq problem_445
+	dq problem_446
+	dq problem_447
+	dq problem_448
+	dq problem_449
+	dq problem_450
+	dq problem_451
+	dq problem_452
+	dq problem_453
+	dq problem_454
+	dq problem_455
+	dq problem_456
+	dq problem_457
+	dq problem_458
+	dq problem_459
+	dq problem_460
+	dq problem_461
+	dq problem_462
+	dq problem_463
+	dq problem_464
+	dq problem_465
+	dq problem_466
+	dq problem_467
+	dq problem_468
+	dq problem_469
+	dq problem_470
+	dq problem_471
+	dq problem_472
+	dq problem_473
+	dq problem_474
+	dq problem_475
+	dq problem_476
+	dq problem_477
+	dq problem_478
+	dq problem_479
+	dq problem_480
+	dq problem_481
+	dq problem_482
+	dq problem_483
+	dq problem_484
+	dq problem_485
+	dq problem_486
+	dq problem_487
+	dq problem_488
+	dq problem_489
+	dq problem_490
+	dq problem_491
+	dq problem_492
+	dq problem_493
+	dq problem_494
+	dq problem_495
+	dq problem_496
+	dq problem_497
+	dq problem_498
+	dq problem_499
+	dq problem_500
+	dq problem_501
+	dq problem_502
+	dq problem_503
+	dq problem_504
+	dq problem_505
+	dq problem_506
+	dq problem_507
+	dq problem_508
+	dq problem_509
+	dq problem_510
+	dq problem_511
+	dq problem_512
+	dq problem_513
+	dq problem_514
+	dq problem_515
+	dq problem_516
+	dq problem_517
+	dq problem_518
+	dq problem_519
+	dq problem_520
+	dq problem_521
+	dq problem_522
+	dq problem_523
+	dq problem_524
+	dq problem_525
+	dq problem_526
+	dq problem_527

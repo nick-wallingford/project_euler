@@ -1,4 +1,4 @@
-global project_008
+global problem_008
 
 section .data
 n: equ 13
@@ -25,7 +25,7 @@ number: db "73167176531330624919225119674426574742355349194934",\
 len: equ $-number
 
 section .text
-project_008:
+problem_008:
 	cld
 	mov rcx,len
 	mov rdi,number

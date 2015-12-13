@@ -1,4 +1,4 @@
-global project_007
+global problem_007
 
 n: equ 10001
 len: equ 1000
@@ -40,7 +40,7 @@ prime_sieve:
 
 .quit:	ret
 
-project_007:
+problem_007:
 	call prime_sieve
 
 	mov rsi,primes

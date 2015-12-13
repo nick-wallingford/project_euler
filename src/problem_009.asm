@@ -1,7 +1,7 @@
-global project_009
+global problem_009
 
 section .text
-project_009:
+problem_009:
 	; We use Euclid's formula for generating pythagorean triples.
 	; a = m^2 - n^2, b = 2mn, c = m^2 + n^2
 	; for 1 < n < m, m+n odd.

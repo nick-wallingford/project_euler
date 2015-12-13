@@ -1,6 +1,6 @@
-global project_002
+global problem_002
 section .text
-project_002:
+problem_002:
 	mov rax,2 ; sum
 	mov rbx,2 ; rbx = F(n-6). Seed with F(2)
 	mov rcx,8 ; rcx = F(n-3). Seed with F(5)

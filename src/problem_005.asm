@@ -1,4 +1,4 @@
-global project_005
+global problem_005
 
 section .text
 	; This problem relies on the prime factorization of all the numbers below n.
@@ -6,7 +6,7 @@ section .text
 	; We multiply those all up and return that product.
 	; This problem can trivially be done on a hand calculator with n of only 20.
 	; 16 * 9 * 5 * 7 * 11 * 13 * 17 * 19 = 232792560
-project_005:
+problem_005:
 	; r8 is a bit for the sieve or eratosthenes.
 	; We can't conceivably need more bits than this.
 	mov r8,0fffffffffffffffch

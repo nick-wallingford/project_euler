@@ -1,4 +1,4 @@
-global project_004
+global problem_004
 
 section .text
 check_palindrome:
@@ -25,7 +25,7 @@ check_palindrome:
 	xor rax,r13
 	ret
 
-project_004:
+problem_004:
 	xor r8,r8   ; Largest currently known palindrome. Zero is trivially a palindrome.
 	mov r9,1000 ; First multiplier + 1
 

@@ -2,10 +2,10 @@ extern parse_ui
 extern print_ui
 extern print_nl
 
-extern project_jump_table
+extern problem_jump_table
 
 section .data
-prompt: db "Running project "
+prompt: db "Running problem "
 prompt_len: equ $-prompt
 
 section .text
@@ -34,7 +34,7 @@ _start:
 	call print_ui
 	call print_nl
 
-	call [project_jump_table + r12*8]
+	call [problem_jump_table + r12*8]
 	call print_ui
 	call print_nl
 

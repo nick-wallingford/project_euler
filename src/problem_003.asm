@@ -2,13 +2,13 @@ extern factor
 extern print_ui
 extern print_nl
 
-global project_003
+global problem_003
 
 section .data
 numbers: dq 13195, 600851475143
 
 section .text
-project_003:
+problem_003:
 	mov r15,2
 .L1:	dec r15
 	mov rsi,[numbers + 8*r15]
